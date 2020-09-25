@@ -50,7 +50,11 @@ def main():
             arg = []
             # while there is at least one character in input, keep getting input from user.
             while "" not in arg:
-                arg.append(input("> "))
+                try:
+                    arg.append(input("> "))
+                except KeyboardInterrupt:
+                    print()
+                    sys.exit(0)
             text = "%0A".join(arg)
             web.open(main_address.format(source_lan, target_lan, text))
             sys.exit(0)
