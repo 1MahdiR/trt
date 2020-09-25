@@ -34,7 +34,7 @@ def main():
             arg = args.args_word
             text = "%0A".join(arg)
             web.open(main_address.format(source_lan, target_lan, text))
-            exit(0)
+            sys.exit(0)
 
         if args.action == "TRANSLATE_INPUT":
             arg = []
@@ -43,13 +43,13 @@ def main():
                 arg.append(input("> "))
             text = "%0A".join(arg)
             web.open(main_address.format(source_lan, target_lan, text))
-            exit(0)
+            sys.exit(0)
 
     except KeyboardInterrupt:
         print()
     except Exception:
         traceback.print_exc(file=sys.stdout)
-    exit(0)
+    sys.exit(0)
 
 
 if __name__ == "__main__":

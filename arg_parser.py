@@ -45,7 +45,7 @@ def parse(args):
         if i not in supported_args:
             print("_ERROR\n Invalid option -- \'" + i[1:] + "\'")
             print(" Try \'trans --help\' for more information.")
-            exit(2)
+            sys.exit(2)
 
     # show help
     if "--help" in opt:
@@ -59,13 +59,13 @@ def parse(args):
     if not lan_args:
         print("_ERROR\n At least one language option must be set.")
         print(" Try \'trans --help\' for more information.")
-        exit(3)
+        sys.exit(3)
 
     # raise error if there was more than 2 language options
     if len(lan_args) > 2:
         print("_ERROR\n Too many language options.")
         print(" Try \'trans --help\' for more information.")
-        exit(3)
+        sys.exit(3)
 
     # if there was one language option set the first one to "auto"
     if len(lan_args) == 1:
@@ -75,7 +75,7 @@ def parse(args):
     if lan_args[0] == lan_args[1]:
         print("_ERROR\n Two language options cannot be the same.")
         print(" Try \'trans --help\' for more information.")
-        exit(3)
+        sys.exit(3)
 
     # if language option was -zh, change it to -zh-CN
     if "-zh" in lan_args:
