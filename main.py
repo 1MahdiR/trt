@@ -1,18 +1,18 @@
-# trt v1.1
+# trt v1.2.0
 # Translate in Terminal
 # trt: A command-line script to translate text, by opening a web page
 # with a specific url at "translate.google.com".
 #
 # Written in python.
-# GITHUB
+# GITLAB: https://gitlab.com/__mr__/trt
 #
-# Check "constant.py" for supported languages and supported actions
 
 import sys
 import pyperclip as pype
 import webbrowser as web
 import traceback
 
+import meta
 from arg_parser import parse
 from constant import main_address
 
@@ -22,6 +22,16 @@ def main():
     try:
         # storing an object that contains the arguments and the action to performing on them
         args = parse(sys.argv[1:])
+
+        if not args.lan_args:
+            if args.action == "HELP":
+                meta.help()
+                sys.exit(0)
+
+            if args.action == "VERSION":
+                meta.version()
+                sys.exit(0)
+
         source_lan = args.lan_args[0][1:]
         target_lan = args.lan_args[1][1:]
 

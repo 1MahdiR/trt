@@ -25,6 +25,9 @@ class Args:
 
 
 def parse(args):
+    """parse and handle args.
+    returns an "Args" object or raises an error for
+    unsupported args."""
 
     opt = []
     args_word = []
