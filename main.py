@@ -5,6 +5,7 @@
 #
 # Written in python.
 # GITLAB: https://gitlab.com/__mr__/trt
+# GITHUB: https://github.com/1MahdiR/trt
 #
 
 import sys
