@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+#
 # trt v2.1.0
 # Translate in Terminal
 # trt: A command-line script to translate text on terminal.
