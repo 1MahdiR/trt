@@ -1,4 +1,4 @@
-VERSION = "1.2.0"
+VERSION = "2.1.0"
 
 
 def help():
@@ -6,7 +6,7 @@ def help():
 
     print()
     print("Usage:  trt [OPTIONS] [ARG]...\n")
-    print("A CLI script to translate text by redirecting to 'translate.google.com'\n")
+    print("A CLI script to translate text on terminal via 'translate.google.com'\n")
     print("At least one language option must be specified.")
     print("Language options:")
     print("  {0:<14}Persian".format("-fa"))

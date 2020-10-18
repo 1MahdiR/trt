@@ -1,7 +1,6 @@
-# trt v1.2.0
+# trt v2.1.0
 # Translate in Terminal
-# trt: A command-line script to translate text, by opening a web page
-# with a specific url at "translate.google.com".
+# trt: A command-line script to translate text on terminal.
 #
 # Written in python.
 # GITLAB: https://gitlab.com/__mr__/trt
@@ -15,6 +14,7 @@ import traceback
 
 import meta
 from arg_parser import parse
+from translate import translate_text
 from constant import main_address
 
 
@@ -38,13 +38,15 @@ def main():
 
         if args.action == "TRANSLATE_CLIPBOARD":
             text = "%0A".join(pype.paste().split("\n"))
-            web.open(main_address.format(source_lan, target_lan, text))
+            translated_text = translate_text(main_address.format(source_lan, target_lan, text))
+            print(translated_text)
             sys.exit(0)
 
         if args.action == "TRANSLATE_COMMANDLINE":
             arg = args.args_word
             text = "%0A".join(arg)
-            web.open(main_address.format(source_lan, target_lan, text))
+            translated_text = translate_text(main_address.format(source_lan, target_lan, text))
+            print(translated_text)
             sys.exit(0)
 
         if args.action == "TRANSLATE_INPUT":
@@ -57,14 +59,17 @@ def main():
                     print()
                     sys.exit(0)
             text = "%0A".join(arg)
-            web.open(main_address.format(source_lan, target_lan, text))
+            translated_text = translate_text(main_address.format(source_lan, target_lan, text))
+            print(translated_text)
             sys.exit(0)
 
     except KeyboardInterrupt:
         print()
+        sys.exit(0)
+
     except Exception:
-        traceback.print_exc(file=sys.stdout)
-    sys.exit(0)
+        print("_ERROR\n An unexpected error has occured during getting the data.\n This is probably because of the"
+              "weak internet connection.")
 
 
 if __name__ == "__main__":
