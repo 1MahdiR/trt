@@ -1,4 +1,4 @@
-#trt
+# trt
 **translate your text on terminal**
 
 'trt' is a CLI script that you can use to translate text on terminal.
