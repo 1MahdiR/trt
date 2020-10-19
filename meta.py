@@ -37,7 +37,7 @@ def version():
     print("Script by MR.")
     print("Source code is available on gitlab and github.")
     print("gitlab: https://gitlab.com/__mr__/trt")
-    print("github: https://github.com/1MahdiR/trt")
+    print("github: https://github.com/1MahdiR/trt/tree/trt_v2")
 
 
 if __name__ == "__main__":

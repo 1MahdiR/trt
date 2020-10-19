@@ -6,7 +6,7 @@
 #
 # Written in python.
 # GITLAB: https://gitlab.com/__mr__/trt
-# GITHUB: https://github.com/1MahdiR/trt
+# GITHUB: https://github.com/1MahdiR/trt/tree/trt_v2
 #
 
 import sys
