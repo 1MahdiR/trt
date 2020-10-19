@@ -5,7 +5,7 @@
 # trt: A command-line script to translate text on terminal.
 #
 # Written in python.
-# GITLAB: https://gitlab.com/__mr__/trt
+# GITLAB: https://gitlab.com/__mr__/trt/-/tree/trt_v2
 # GITHUB: https://github.com/1MahdiR/trt/tree/trt_v2
 #
 
