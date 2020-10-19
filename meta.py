@@ -36,7 +36,7 @@ def version():
     print("trt v{}".format(VERSION))
     print("Script by MR.")
     print("Source code is available on gitlab and github.")
-    print("gitlab: https://gitlab.com/__mr__/trt")
+    print("gitlab: https://gitlab.com/__mr__/trt/-/tree/trt_v2")
     print("github: https://github.com/1MahdiR/trt/tree/trt_v2")
 
 
